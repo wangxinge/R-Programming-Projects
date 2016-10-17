@@ -1,0 +1,22 @@
+---
+title: "Removing NA Values"
+output: html_document
+---
+
+```{r}
+x<-c(1,2,NA,4,NA,5)
+bad<-is.na(x)
+x[!bad]
+x[bad]
+```
+bad vector is a logical vector
+What if you have multiple vectors need to be judged
+```{r}
+y<-c("a","b",NA,"d",NA,"f")
+good<-complete.cases(x,y)
+good
+x[good]
+y[good]
+```
+
+complete.cased() can also be applied to data frame, just get the subset of null NA rows of the data

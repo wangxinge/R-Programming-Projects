@@ -1,0 +1,13 @@
+dput-ting R Objects
+
+```{r}
+y<-data.frame(a=1:3,b=c("a","b","c"))
+y
+dput(y)
+dput(y,file="dput_y.R")
+new.y<-dget("dput_y.R")
+new.y
+```
+
+structure() function returns the given object with further attributes set
+

@@ -1,0 +1,26 @@
+Difference between single bracket [] and double bracket [[]] operation
+Subsetting Lists
+```{r}
+x<-list(foo=1:4,bar=0.6)
+x[1]
+x[[1]]
+```
+As you can see, the single bracket only return the same class as its operate target.
+Whereas, the double brackets will just return stuff inside the first element.
+```{r}
+x$bar
+x[["bar"]]
+x["bar"]
+```
+Upper process shows you the differences including $ sign in it.
+
+```{r}
+x<-list(a=list(10,12,14),b=c(3.14,2.5))
+x[[c(1,3)]]
+x[[1]][[3]]
+x[[c(2,1)]]
+```
+
+
+
+

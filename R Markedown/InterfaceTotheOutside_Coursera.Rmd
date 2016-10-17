@@ -1,0 +1,25 @@
+Connections
+
+```{r}
+connection<-file("/Users/xingewang/Desktop/Lab2/query.output.exome_summary.csv","r")
+data<-read.csv(connection)
+close(connection)
+```
+
+is the same as
+```{r}
+data<-read.csv("/Users/xingewang/Desktop/Lab2/query.output.exome_summary.csv")
+```
+
+Reading Lines of a Text File
+readLines(connection,10)/
+or/
+writeLines() takes a character ector and writes each elements one line at a time in a text file.
+
+This might take time
+```{r}
+con<-url("http://www.jhsph.edu","r")
+x<-readLines(con)
+head(x)
+```
+

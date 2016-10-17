@@ -1,0 +1,19 @@
+#1. Working Directory
+# Current Working Directory
+```{r}
+getwd()
+```
+# List current folder and all the directories here
+```{r}
+ls()
+dir()
+```
+# Reference stuff from current folder
+```{r}
+# source()
+```
+# Changing Working Directory
+```{r}
+setwd("/Users/xingewang/Desktop/R/R Markedown/")
+```
+

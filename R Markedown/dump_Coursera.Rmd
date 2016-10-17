@@ -1,0 +1,15 @@
+Dumping R Objects
+
+```{r}
+x<- c("hello")
+y<-data.frame(a=1:3,b=c("a","b","c"))
+dump(c("x","y"),file="dump_data.R")
+rm(x,y)
+source("dump_data.R")
+x
+y
+```
+
+
+dget() is for restore single R object, whereas, dump() is for restore multiple R objects.
+Cool!

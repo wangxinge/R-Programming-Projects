@@ -1,0 +1,12 @@
+Reading in Larger DAtasets with read.table
+How to tab all the columns of your large dataset?
+
+```{r}
+initial<-read.table("/Users/xingewang/Desktop/Lab2/SeattleSeqAnnotation138.SRR2968056_chr22.vcf",skip = 2,nrows = 100)
+classes<-sapply(initial,class)
+classes
+tabAll<-read.table("/Users/xingewang/Desktop/Lab2/SeattleSeqAnnotation138.SRR2968056_chr22.vcf",colClasses = classes)
+lapply(tabAll, class)
+```
+
+Set nrows doesn't make R run faster but it helps with memory usage. A mild overestimate is okay. You can also use the Unix tool wc to calculate the number of lines in a file.
